@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body onload="slider()">
+    <div class="banner">
+    <div class="slider">
+        <img src="Images/slide1.jpg" id="sliderimg">
+    </div>
+    <div class="overlay"> 
+        <div class="navbar">
+            <!-- <div class="logo">
+                <img src="logo.png">
+            </div> -->
+
+            <!-- <div class="menu-icons">
+                <img src=""user>
+                <img src=""cart>
+                <img src=""menu>
+            </div> -->
+        </div><br>
+
+        <div class="content">
+            <h1>Welcome To Ev.</h1>
+            <h3>Charge your ev for better experience</h3>
+
+            <div>
+                <button type="button">
+                    <a href="/Login-Sign-up page/popuplogin.html" class="txt">Login</a>
+                </button>
+                <button type="button" class="btn-2">
+                    <a href="/ESD/evchargingstation.html" class="txt">More</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+    var sliderimg = document.getElementById("sliderimg");
+
+    var images = new Array(
+        "Images/slide1.jpg",
+        "Images/slide2.jpg",
+        "Images/slide3.jpg",
+        "Images/slide4.jpg"
+    );
+
+    var len = images.length;
+    var i=0;
+
+    function slider(){
+        if(i>len-1){
+            i=0;
+        }
+        sliderimg.src = images[i];
+        i++;
+        setTimeout('slider()',3000);
+    }
+
+
+    </script>
+</body>
+</html>
